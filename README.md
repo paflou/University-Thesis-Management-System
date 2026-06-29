@@ -1,4 +1,30 @@
+# University Thesis Management System
+
+A centralized platform designed to streamline the lifecycle of academic thesis projects. This system facilitates coordination between students, professors, and administrative staff, replacing manual tracking with a digital, role-based workflow.
+
+## Key Features
+* **Role-Based Access Control:** Distinct interfaces and permission sets for students, faculty, and administrative secretaries.
+* **Thesis Lifecycle Management:** End-to-end handling of thesis assignment, proposal approval, grading, and presentation scheduling.
+* **Data Integrity:** Structured database schema ensures consistent tracking of project data across multiple semesters.
+* **Automated Data Handling:** Includes support for database seeding to quickly initialize testing environments.
+
+## Technical Stack
+* **Backend:** Node.js, Express.js
+* **Database:** MariaDB
+* **Frontend:** HTML5, CSS3, Bootstrap 5, JavaScript (Vanilla/ES6)
+* **Development Tools:** nodemon, npm
+
+## Architecture
+The application utilizes an MVC-inspired pattern:
+* **Controllers:** Handle the business logic for professors, thesis assignments, and secretary actions.
+* **Middlewares:** Custom logic for permission checks and secure file uploads to ensure system security.
+* **Database:** Managed through structured SQL scripts for creation and seeding.
+
 # Setup Instructions
+
+## Prerequisites
+* Node.js installed on your machine.
+* A running MySQL or MariaDB instance.
 
 ## 1. Create a `.env` file
 
@@ -49,3 +75,8 @@ If you want to run the server in development mode with automatic reload on code 
 ```bash
 npm run dev
 ```
+
+## Future Enhancements:
+* **OAuth Integration:** Implement SSO for university-wide logins.
+* **Dashboard Analytics:** Add visual reporting for administrators to track department thesis progress.
+* **Real-time Notifications:** Implement WebSockets for status updates regarding thesis approvals.
