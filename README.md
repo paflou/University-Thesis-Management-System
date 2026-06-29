@@ -15,10 +15,13 @@ A centralized platform designed to streamline the lifecycle of academic thesis p
 * **Development Tools:** nodemon, npm
 
 ## Architecture
-The application utilizes an MVC-inspired pattern:
-* **Controllers:** Handle the business logic for professors, thesis assignments, and secretary actions.
-* **Middlewares:** Custom logic for permission checks and secure file uploads to ensure system security.
-* **Database:** Managed through structured SQL scripts for creation and seeding.
+The backend follows a layered architecture separating HTTP request handling from business logic and data access.
+
+- **Routes:** Define REST endpoints and route incoming requests.
+- **Controllers:** Validate requests and coordinate application logic.
+- **Services:** Implement business rules for thesis management, user roles, grading, and approvals.
+- **Middleware:** Enforce authentication, authorization, and file upload validation.
+- **Database:** MariaDB relational schema with SQL-based initialization and seeding.
 
 # Setup Instructions
 
